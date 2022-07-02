@@ -27,7 +27,7 @@ public class ArticlesTests extends TestBase {
                 .shouldHave(Condition.text(requiredDate));
     }
 
-    @Disabled("Нет кнопки сегодняшних статей (33432)")
+    @Disabled("Баг: Нет кнопки сегодняшних статей (33432)")
     @Test
     @DisplayName("Кнопка сегодняшних статей открывает страницу свежих статей")
     void TodayOnWikipediaArticlesTest() {

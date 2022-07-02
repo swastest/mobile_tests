@@ -23,8 +23,12 @@ public class TestBase {
 
         if (host.equals("local")) {
             Configuration.browser = LocalMobileDriver.class.getName();
-        } else {
+        }
+        if  (host.equals("browserstack")){
             Configuration.browser = BrowserstackMobileDriver.class.getName();
+        }
+        else {
+            System.out.println("Проверьте выбранный девайс");
         }
         Configuration.browserSize = null;
     }

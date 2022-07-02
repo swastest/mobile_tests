@@ -2,8 +2,7 @@ package configs;
 import org.aeonbits.owner.Config;
 
 
-@Config.Sources(
-        "classpath:properties/bStackDriver.properties")
+@Config.Sources("classpath:properties/bStackDriver.properties")
 
 public interface StackInterface extends Config {
     String username();

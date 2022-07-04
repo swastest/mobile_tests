@@ -15,6 +15,7 @@ import java.util.Locale;
 import static com.codeborne.selenide.Selenide.*;
 
 @Tag("android")
+@DisplayName("Проверка статей")
 public class ArticlesTests extends TestBase {
 
     DateFormat df = new SimpleDateFormat("MMMMM d", Locale.ENGLISH);

@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -14,6 +15,7 @@ public class SearchTests extends TestBase{
     String searchWord = System.getProperty("searchWord","Dota 2");
 
     @Test
+    @AllureId("10926")
     @DisplayName("Проверка заголовка статьи, что он соответствует запросу поиска")
     void checkingArticleTitle(){
         back();

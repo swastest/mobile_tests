@@ -1,6 +1,7 @@
 package tests;
 
 import io.appium.java_client.AppiumBy;
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,6 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class GettingStartedOnboardingScreenTest extends TestBase {
 
     @Test
+    @AllureId("10925")
     @DisplayName("Позитивная проверка онбординга")
     void SearchPositiveTest(){
         $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))

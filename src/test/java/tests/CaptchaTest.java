@@ -19,8 +19,8 @@ public class CaptchaTest extends TestBase {
     @AllureId("10924")
     @DisplayName("Проверка капчи при регистрации")
     void captchaTestAtRegistration() {
-        back();
         step("Перейти к форме регистрации", () -> {
+            back();
             $(AppiumBy.xpath("//android.widget.TextView[@text='Edits']")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/positiveButton")).click();
         });

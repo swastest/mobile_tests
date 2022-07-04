@@ -26,5 +26,4 @@ public class SearchTests extends TestBase{
                 .shouldHave(Condition.text(searchWord));
     }
 
-
 }

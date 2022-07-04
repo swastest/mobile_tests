@@ -2,6 +2,7 @@ package tests;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -20,6 +21,7 @@ public class ArticlesTests extends TestBase {
     String requiredDate = df.format(new Date());
 
     @Test
+    @AllureId("10922")
     @DisplayName("Дата избранной статьи, на главной поисковой странице, соответствует актуальной дате")
     void selectedArticleTodayTest() {
         back();
@@ -29,6 +31,7 @@ public class ArticlesTests extends TestBase {
 
     @Disabled("Баг: Нет кнопки сегодняшних статей (33432)")
     @Test
+    @AllureId("10923")
     @DisplayName("Кнопка сегодняшних статей открывает страницу свежих статей")
     void TodayOnWikipediaArticlesTest() {
         back();

@@ -48,7 +48,7 @@ public class CaptchaTest extends TestBase {
             $(AppiumBy.xpath("//android.widget.Button[@text='NEXT']")).click();
         });
 
-        step("Проверка, что капча и ее отрибуты отображаются корректно", () -> {
+        step("Проверка, что капча и ее атрибуты отображаются корректно", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/request_account_text"))
                     .shouldHave(text("Can't see the image? Request an account"));
             $(AppiumBy.id("org.wikipedia.alpha:id/captcha_image"))

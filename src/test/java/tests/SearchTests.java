@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 @Tag("android")
 public class SearchTests extends TestBase{
 
-    String searchWord = System.getProperty("searchWord","Dota 2");
+    String searchWord = System.getProperty("searchWord","World");
 
     @Test
     @AllureId("10926")

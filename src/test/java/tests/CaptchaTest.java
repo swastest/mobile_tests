@@ -25,21 +25,17 @@ public class CaptchaTest extends TestBase {
             $(AppiumBy.id("org.wikipedia.alpha:id/positiveButton")).click();
         });
 
-        step("Убедиться, что открылась форма Регистрации", () -> {
+        step("Убедиться, что открылась форма Регистрации", () ->
             $(AppiumBy.xpath("//android.widget.TextView[@text='Create an account']"))
-                    .shouldHave(text("Create an account"));
-        });
+                    .shouldHave(text("Create an account")));
 
         step("Заполнить форму Регистрации", () -> {
             $(AppiumBy.xpath("//android.widget.EditText[@text='Username']"))
                     .sendKeys("QaGuruHello");
-
             $(AppiumBy.xpath("//android.widget.EditText[@text='Password']"))
                     .sendKeys("12345678");
-
             $(AppiumBy.xpath("//android.widget.EditText[@text='Repeat password']"))
                     .sendKeys("12345678");
-
             $(AppiumBy.xpath("//android.widget.EditText[@text='Email (Optional)']"))
                     .sendKeys("qaGurur123@google.com");
         });

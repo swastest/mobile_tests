@@ -1,9 +1,7 @@
-package configs;
+package config;
 import org.aeonbits.owner.Config;
 
-
 @Config.Sources("classpath:properties/bStackDriver.properties")
-
 public interface BrowserstackInterface extends Config {
     String username();
     String accessKey();

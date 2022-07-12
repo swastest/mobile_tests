@@ -1,11 +1,10 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import configs.LocalMobileInterface;
+import config.ConfigCenter;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
-import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
@@ -18,12 +17,9 @@ import java.net.URL;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class LocalMobileDriver implements WebDriverProvider {
-    static LocalMobileInterface config = ConfigFactory.create(LocalMobileInterface.class,
-            System.getProperties());
-
     public static URL getAppiumServerUrl() {
         try {
-            return new URL(config.localURL());
+            return new URL(ConfigCenter.configLocal.localURL());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
@@ -36,9 +32,9 @@ public class LocalMobileDriver implements WebDriverProvider {
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
-        options.setPlatformName(config.platformName());
-        options.setDeviceName(config.deviceName());
-        options.setPlatformVersion(config.osVersion());
+        options.setPlatformName(ConfigCenter.configLocal.platformName());
+        options.setDeviceName(ConfigCenter.configLocal.deviceName());
+        options.setPlatformVersion(ConfigCenter.configLocal.osVersion());
         options.setApp(app.getAbsolutePath());
         options.setAppPackage("org.wikipedia.alpha");
         options.setAppActivity("org.wikipedia.main.MainActivity");

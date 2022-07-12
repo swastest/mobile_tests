@@ -11,7 +11,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 @Tag("android")
 public class SearchTests extends TestBase{
-
     String searchWord = System.getProperty("searchWord","World");
 
     @Test
@@ -27,5 +26,4 @@ public class SearchTests extends TestBase{
         $(AppiumBy.xpath("//android.widget.TextView[@text='"+searchWord+"']"))
                 .shouldHave(Condition.text(searchWord));
     }
-
 }

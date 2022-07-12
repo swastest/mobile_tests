@@ -12,7 +12,6 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("android")
 public class GettingStartedOnboardingScreenTest extends TestBase {
-
     @Test
     @AllureId("10925")
     @DisplayName("Позитивная проверка онбординга")
